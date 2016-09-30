@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2004-2009 Tiny SPRL (<http://tiny.be>).
 #
@@ -15,7 +15,7 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
@@ -29,18 +29,19 @@ loan_form = '''<?xml version="1.0"?>
 </form>'''
 
 loan_fields = {
-    'partner_id': {'string':'Partner', 'type':'many2one', 'relation': 'res.partner', 'required':True},
+    'partner_id': {'string': 'Partner', 'type': 'many2one', 'relation': 'res.partner', 'required': True},
 }
+
 
 class wizard_report(wizard.interface):
     states = {
         'init': {
             'actions': [],
-            'result': {'type':'form', 'arch':loan_form, 'fields':loan_fields, 'state':[('end','Cancel'),('report','Print Loan Report.')]}
+            'result': {'type': 'form', 'arch': loan_form, 'fields': loan_fields, 'state': [('end', 'Cancel'), ('report', 'Print Loan Report.')]}
         },
         'report': {
             'actions': [],
-            'result': {'type':'print', 'report':'account.partner.loan', 'state':'end'}
+            'result': {'type': 'print', 'report': 'account.partner.loan', 'state': 'end'}
         }
     }
 wizard_report('account.partner.loan')

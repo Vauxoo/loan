@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2004-2009 Tiny SPRL (<http://tiny.be>).
 #
@@ -16,16 +16,16 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
 {
 
-    "name" : "Loan Management",
-    "version" : "1.0",
-    "depends" : ["base", "account", "account_voucher"],
-    "author" : "Tiny",
+    "name": "Loan Management",
+    "version": "1.0",
+    "depends": ["base", "account", "account_voucher"],
+    "author": "Tiny",
     "description": """Loan Management System
     * Integrated to Accounting System
     * Usefull for any type of Loans - Home, Business, Personal
@@ -34,11 +34,11 @@
     * Reports related to the Loans, Documents, Loan Papers
     * Dynamic Interest Rates Calculation
     """,
-    "init_xml" : [],
-    "demo_xml" : [
+    "init_xml": [],
+    "demo_xml": [
         "loan_demo.xml"
     ],
-    "update_xml" : [
+    "update_xml": [
         "loan_view.xml",
         "loantype_view.xml",
         "loan_sequence.xml",
